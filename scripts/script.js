@@ -58,14 +58,18 @@ function guessWord() {
 
 // Alerts player that they've won the game
 function correctGuess() {
-    alert(`Congrats! You found the word ${word.toUpperCase()}`);
-    return randomWord();
+    setTimeout(function () {
+        alert(`Congrats! You found the word ${word.toUpperCase()}`);
+        return randomWord();
+    }, 200);
 }
 
 // Alerts player that they're out of guesses and lets them know the correct word
 function wrongGuess() {
-    alert(`Sorry! The correct word was ${word.toUpperCase()}`);
-    return randomWord();
+    setTimeout(function () {
+        alert(`Sorry! The correct word was ${word.toUpperCase()}`);
+        return randomWord();
+    }, 200);
 }
 
 // Keeps track of current input value
